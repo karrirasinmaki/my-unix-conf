@@ -7,6 +7,8 @@ set smartindent
 
 set wildmenu
 
+set updatetime=500
+
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
   if &wrap
@@ -37,3 +39,6 @@ function ToggleWrap()
   endif
 endfunction
 
+call plug#begin('~/.vim/plugged')
+Plug 'Vimchant'
+call plug#end()
