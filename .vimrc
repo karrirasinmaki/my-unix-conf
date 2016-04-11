@@ -6,8 +6,10 @@ set smartcase
 set smartindent
 
 set wildmenu
+set hlsearch
 
 set updatetime=500
+set mouse=a
 
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
@@ -41,4 +43,5 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 Plug 'Vimchant'
+Plug 'arnar/vim-matchopen'
 call plug#end()
