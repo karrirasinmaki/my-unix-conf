@@ -1,15 +1,19 @@
-set shiftwidth=4
-set tabstop=4
+set tabstop=4 shiftwidth=4
 
 set ignorecase
 set smartcase
 set smartindent
+set number
 
+syntax on
+color murphy
+
+set wildmode=longest:list,full
 set wildmenu
-set hlsearch
+
+set mouse=a
 
 set updatetime=500
-set mouse=a
 
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
@@ -43,5 +47,5 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 Plug 'Vimchant'
-Plug 'arnar/vim-matchopen'
+Plug 'scrooloose/nerdtree'
 call plug#end()
