@@ -45,7 +45,7 @@ set mouse=a
 
 set updatetime=500
 
-set hlsearch 
+set hlsearch
 
 highlight ExtraWhitespace ctermbg=gray guibg=gray
 match ExtraWhitespace /\s\+$/
@@ -97,5 +97,6 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 Plug 'Vimchant'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
