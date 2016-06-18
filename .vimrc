@@ -1,13 +1,69 @@
-set shiftwidth=4
-set tabstop=4
+set fileencodings=utf-8
+let mapleader=","
+
+" Normalize backspace
+set backspace=2
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'groenewege/vim-less'
+Plugin 'scrooloose/nerdTree'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ervandew/eclim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+set gfn=Monaco:h13
+set tabstop=4 shiftwidth=4
 
 set ignorecase
 set smartcase
-set smartindent
+set autoindent
+set number
 
+syntax on
+color darkblue
+
+set tags=.tags
+
+set wildmode=longest:list,full
 set wildmenu
 
+set mouse=a
+
 set updatetime=500
+
+set hlsearch 
+
+highlight ExtraWhitespace ctermbg=gray guibg=gray
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" Always use magic when searching
+nnoremap / /\v
+vnoremap / /\v
+cnoremap %s/ %smagic/
+cnoremap \>s/ \>smagic/
+nnoremap :g/ :g/\v
+nnoremap :g// :g//
+
+" F3 to jump to definition (remap ctag default)
+noremap <F3> <C-]>
 
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function ToggleWrap()
@@ -42,3 +98,4 @@ endfunction
 call plug#begin('~/.vim/plugged')
 Plug 'Vimchant'
 call plug#end()
+
