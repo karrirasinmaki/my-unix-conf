@@ -1,0 +1,20 @@
+DS_Store
+.DS_Store?
+
+*.log
+*.sql
+*.sqlite
+
+
+### VIM ###
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+

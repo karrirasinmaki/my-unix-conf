@@ -1,0 +1,6 @@
+[user]
+	email = karri.rasinmaki@gmail.com
+	name = Karri Rasinmäki
+
+[core]
+	excludesFile = ~/.gitignore
