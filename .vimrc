@@ -14,11 +14,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'tpope/vim-sleuth'
 Plugin 'groenewege/vim-less'
 Plugin 'scrooloose/nerdTree'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/eclim'
+Plugin 'matchit.zip'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
