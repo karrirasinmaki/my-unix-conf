@@ -10,3 +10,6 @@ ln -sfv $BASEDIR/.myrc ~/.myrc
 ln -sfv $BASEDIR/.vimrc ~/.vimrc
 ln -sfv $BASEDIR/.gitconfig ~/.gitconfig
 ln -sfv $BASEDIR/.gitignore ~/.gitignore
+
+echo "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
