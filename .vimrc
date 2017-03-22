@@ -16,8 +16,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sleuth'
 Plugin 'groenewege/vim-less'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdTree'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'othree/html5.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/eclim'
 Plugin 'matchit.zip'
@@ -26,17 +28,22 @@ Plugin 'matchit.zip'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+au BufNewFile,BufRead *.ejs set filetype=html
 
 set gfn=Monaco:h13
+set clipboard=unnamedplus
+
 set tabstop=4 shiftwidth=4
+set autoindent
+set smartindent
+set cindent
 
 set ignorecase
 set smartcase
-set autoindent
 set number
 
 syntax on
-color darkblue
+colorscheme vimbrains
 
 set tags=.tags
 
@@ -96,9 +103,4 @@ function ToggleWrap()
     inoremap <buffer> <silent> <End>  <C-o>g<End>
   endif
 endfunction
-
-call plug#begin('~/.vim/plugged')
-Plug 'Vimchant'
-Plug 'scrooloose/nerdtree'
-call plug#end()
 
