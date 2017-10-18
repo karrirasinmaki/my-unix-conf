@@ -26,17 +26,17 @@ Plugin 'matchit.zip'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
 
 au BufNewFile,BufRead *.ejs set filetype=html
 
 set gfn=Monaco:h13
 set clipboard=unnamedplus
 
-set tabstop=4 shiftwidth=4
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set autoindent
 set smartindent
 set cindent
+filetype plugin indent on
 
 set ignorecase
 set smartcase
