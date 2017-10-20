@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sleuth'
 Plugin 'groenewege/vim-less'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdTree'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ctrlpvim/ctrlp.vim'
