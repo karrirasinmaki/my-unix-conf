@@ -7,6 +7,15 @@ set backspace=2
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Indent
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set autoindent
+set smartindent
+set cindent
+filetype plugin indent on
+
+au BufNewFile,BufRead *.ejs set filetype=html
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -23,20 +32,13 @@ Plugin 'othree/html5.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/eclim'
 Plugin 'matchit.zip'
+Plugin 'iamcco/markdown-preview.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
-au BufNewFile,BufRead *.ejs set filetype=html
-
 set gfn=Monaco:h13
 set clipboard=unnamedplus
-
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-set autoindent
-set smartindent
-set cindent
-filetype plugin indent on
 
 set ignorecase
 set smartcase
