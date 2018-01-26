@@ -7,6 +7,15 @@ set backspace=2
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Indent
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set autoindent
+set smartindent
+set cindent
+filetype plugin indent on
+
+au BufNewFile,BufRead *.ejs set filetype=html
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,30 +23,26 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" language extensions
 Plugin 'groenewege/vim-less'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'scrooloose/nerdTree'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/html5.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+" language tools
+Plugin 'iamcco/markdown-preview.vim'
 Plugin 'ervandew/eclim'
+" useful tools for everyday vim use
+Plugin 'scrooloose/nerdTree'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'matchit.zip'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-fugitive' " git wrapper
+Plugin 'tpope/vim-sleuth' " indention
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
-au BufNewFile,BufRead *.ejs set filetype=html
-
 set gfn=Monaco:h13
 set clipboard=unnamedplus
-
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-set autoindent
-set smartindent
-set cindent
-filetype plugin indent on
 
 set ignorecase
 set smartcase
