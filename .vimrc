@@ -34,6 +34,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'matchit.zip'
 Plugin 'tpope/vim-fugitive' " git wrapper
 Plugin 'tpope/vim-sleuth' " indention
+Plugin 'wakatime/vim-wakatime' " time tracking
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -4,4 +4,4 @@ ZSH_THEME="amuse"
 alias gitlog='git log -20 --pretty=format:"%C(red)%h%Creset\\ %C(green)%ar%C(cyan)%d\\ %Creset%s%C(red)\\ [%cn]" --graph --decorate --all'
 eval "$(thefuck-alias)"
 
-alias codegrep='grep -r --include=\*.{js,ts,html,css,less,sass,scss,php,py,java} --exclude-dir={node_modules,.venv,.env}'
+alias codegrep='grep -r --include=\*.{js,ts,html,css,less,sass,scss,php,py,java,json,cson} --exclude-dir={node_modules,.venv,.env}'
