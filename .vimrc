@@ -7,12 +7,6 @@ set backspace=2
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" Indent
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-set autoindent
-set smartindent
-set cindent
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -33,12 +27,17 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'matchit.zip'
 Plugin 'tpope/vim-fugitive' " git wrapper
-Plugin 'tpope/vim-sleuth' " indention
+Plugin 'ciaranm/detectindent' " indention
 Plugin 'wakatime/vim-wakatime' " time tracking
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on
+
+" Config detectindent
+let g:detectindent_preferred_expandtab = 0
+let g:detectindent_preferred_indent = 4
+autocmd BufReadPost * :DetectIndent 
 
 au BufNewFile,BufRead *.ejs set filetype=html
 
