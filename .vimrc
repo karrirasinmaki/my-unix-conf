@@ -7,6 +7,9 @@ set backspace=2
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Indenting defaults
+set tabstop=4 shiftwidth=4
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
