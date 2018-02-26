@@ -37,6 +37,9 @@ Plugin 'wakatime/vim-wakatime' " time tracking
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+" Enable fzf
+set rtp+=~/.fzf
+
 set autoindent
 filetype plugin indent on
 
