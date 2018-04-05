@@ -23,8 +23,9 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/html5.vim'
 " language tools
+Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'iamcco/markdown-preview.vim'
-Plugin 'ervandew/eclim'
+" Plugin 'ervandew/eclim'
 " useful tools for everyday vim use
 Plugin 'scrooloose/nerdTree'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -42,6 +43,10 @@ set rtp+=~/.fzf
 
 set autoindent
 filetype plugin indent on
+
+" Java
+let g:JavaComplete_GradleExecutable = getcwd() . '/gradlew'
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Config detectindent
 " let g:detectindent_preferred_expandtab = 0
@@ -121,3 +126,4 @@ if !exists('*ToggleWrap')
       endif
     endfunction
 endif
+
