@@ -9,6 +9,7 @@ filetype off                  " required
 
 " Indenting defaults
 " set tabstop=4 shiftwidth=4
+set shiftwidth=4
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -22,6 +23,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/html5.vim'
+Plugin 'tfnico/vim-gradle'
 " language tools
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'iamcco/markdown-preview.vim'
@@ -31,7 +33,6 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'matchit.zip'
 Plugin 'tpope/vim-fugitive' " git wrapper
-" Plugin 'ciaranm/detectindent' " indention
 Plugin 'tpope/vim-sleuth.git' " indention
 Plugin 'wakatime/vim-wakatime' " time tracking
 
@@ -48,10 +49,7 @@ filetype plugin indent on
 let g:JavaComplete_GradleExecutable = getcwd() . '/gradlew'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-" Config detectindent
-" let g:detectindent_preferred_expandtab = 0
-" let g:detectindent_preferred_indent = 4
-" autocmd BufReadPost * :DetectIndent 
+" Config vim-sleuth
 let g:SleuthDefaultWidth = 4
 
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -91,6 +89,24 @@ cnoremap %s/ %smagic/
 cnoremap \>s/ \>smagic/
 nnoremap :g/ :g/\v
 nnoremap :g// :g//
+
+" copy current file name (relative/absolute) to system clipboard (Linux version)
+if has("gui_gtk") || has("gui_gtk2") || has("gui_gnome") || has("unix")
+  " relative path (src/foo.txt)
+  nnoremap <leader>% :let @+=expand("%")<CR>
+
+  " absolute path (/something/src/foo.txt)
+  nnoremap <leader>%p :let @+=expand("%:p")<CR>
+
+  " filename (foo.txt)
+  nnoremap <leader>%t :let @+=expand("%:t")<CR>
+  
+  " relative path to directory (/something/src)
+  nnoremap <leader>%h :let @+=expand("%:h")<CR>
+
+  " absolute path to directory (/something/src)
+  nnoremap <leader>%ph :let @+=expand("%:p:h")<CR>
+endif
 
 " F3 to jump to definition (remap ctag default)
 noremap <F3> <C-]>
