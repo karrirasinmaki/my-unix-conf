@@ -64,8 +64,6 @@ set number
 syntax on
 colorscheme vimbrains
 
-set tags=.tags
-
 set wildmode=longest:list,full
 set wildmenu
 
