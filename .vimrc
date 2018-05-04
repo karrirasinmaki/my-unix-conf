@@ -24,6 +24,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/html5.vim'
 Plugin 'tfnico/vim-gradle'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " language tools
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'iamcco/markdown-preview.vim'
@@ -64,8 +66,10 @@ set number
 syntax on
 colorscheme vimbrains
 
+" wild
 set wildmode=longest:list,full
 set wildmenu
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
 set mouse=a
 
@@ -73,6 +77,7 @@ set updatetime=500
 
 set hlsearch
 
+" highlight extra whitespace
 highlight ExtraWhitespace ctermbg=gray guibg=gray
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
