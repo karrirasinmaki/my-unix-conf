@@ -9,6 +9,7 @@ filetype off                  " required
 
 " Indenting defaults
 " set tabstop=4 shiftwidth=4
+set tabstop=4
 set shiftwidth=4
 
 " set the runtime path to include Vundle and initialize
