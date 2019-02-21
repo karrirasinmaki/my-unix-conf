@@ -96,6 +96,16 @@ cnoremap \>s/ \>smagic/
 nnoremap :g/ :g/\v
 nnoremap :g// :g//
 
+" Convert \uXXXX strings to UTF characters
+if !exists('UtfDecode')
+  function! UtfDecode()
+    %s/\\u\(\x\{4\}\)/\=nr2char('0x'.submatch(1),1)/g
+  endfunction
+endif
+
+command Utfdecode call UtfDecode()
+
+
 " copy current file name (relative/absolute) to system clipboard (Linux version)
 if has("gui_gtk") || has("gui_gtk2") || has("gui_gnome") || has("unix")
   " relative path (src/foo.txt)
