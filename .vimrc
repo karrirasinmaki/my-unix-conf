@@ -30,6 +30,8 @@ Plugin 'mxw/vim-jsx'
 " language tools
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'iamcco/markdown-preview.vim'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'kristijanhusak/vim-js-file-import'
 " Plugin 'ervandew/eclim'
 " useful tools for everyday vim use
 Plugin 'scrooloose/nerdTree'
