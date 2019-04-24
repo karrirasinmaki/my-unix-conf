@@ -12,6 +12,10 @@ filetype off                  " required
 set tabstop=4
 set shiftwidth=4
 
+""
+" Wundle
+"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -40,9 +44,15 @@ Plugin 'matchit.zip'
 Plugin 'tpope/vim-fugitive' " git wrapper
 Plugin 'tpope/vim-sleuth.git' " indention
 Plugin 'wakatime/vim-wakatime' " time tracking
+" Themes
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+" ---
+" /Wundle
+""
 
 " Enable fzf
 set rtp+=~/.fzf
@@ -62,12 +72,19 @@ au BufNewFile,BufRead *.ejs set filetype=html
 set gfn=Monaco:h13
 set clipboard=unnamedplus
 
+set number " line numbers
+
+" smartcase search, ignore case only if search
+" does not include uppercase letters
 set ignorecase
 set smartcase
-set number
 
+" theme
 syntax on
-colorscheme vimbrains
+" colorscheme vimbrains
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_contrast_dark = 'medium'
 
 " wild
 set wildmode=longest:list,full
@@ -103,7 +120,9 @@ if !exists('UtfDecode')
   endfunction
 endif
 
-command Utfdecode call UtfDecode()
+if !exists(':Utfdecode')
+    command Utfdecode call UtfDecode()
+endif
 
 
 " copy current file name (relative/absolute) to system clipboard (Linux version)
