@@ -101,7 +101,7 @@ if !exists('UtfDecode')
   endfunction
 endif
 
-command Utfdecode call UtfDecode()
+command! Utfdecode call UtfDecode()
 
 
 " copy current file name (relative/absolute) to system clipboard (Linux version)
@@ -124,6 +124,13 @@ endif
 
 " F3 to jump to definition (remap ctag default)
 noremap <F3> <C-]>
+
+nnoremap <Leader># #``
+
+command! HlUnderCursor let g:HlUnderCursor=!get(g:, 'HlUnderCursor', 0)
+autocmd! CursorMoved * exe get(g:, 'HlUnderCursor', 0)
+    \?printf("set hls\nlet @/='%s'", escape(expand('<cword>'), '/\'))
+    \:'match none'
 
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 if !exists('*ToggleWrap')
