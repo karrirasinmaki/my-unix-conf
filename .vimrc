@@ -9,8 +9,8 @@ filetype off                  " required
 
 " Indenting defaults
 " set tabstop=4 shiftwidth=4
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 ""
 " Wundle
@@ -65,7 +65,7 @@ let g:JavaComplete_GradleExecutable = getcwd() . '/gradlew'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Config vim-sleuth
-let g:SleuthDefaultWidth = 4
+let g:SleuthDefaultWidth = 2
 
 au BufNewFile,BufRead *.ejs set filetype=html
 
