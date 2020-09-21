@@ -61,6 +61,9 @@ set rtp+=~/.fzf
 set autoindent
 filetype plugin indent on
 
+" Gutentags
+let g:gutentags_cache_dir = '/tmp/vim/tags'
+
 " Java
 let g:JavaComplete_GradleExecutable = getcwd() . '/gradlew'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete

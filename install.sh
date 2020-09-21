@@ -5,6 +5,7 @@ BASEDIR=$PWD
 
 echo $BASEDIR
 
+ln -sfv $BASEDIR/.alacritty.yml ~/.alacritty.yml
 ln -sfv $BASEDIR/.zshrc ~/.zshrc
 ln -sfv $BASEDIR/.myrc ~/.myrc
 ln -sfv $BASEDIR/.vimrc ~/.vimrc

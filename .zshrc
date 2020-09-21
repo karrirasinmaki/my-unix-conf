@@ -5,6 +5,8 @@ plugins=(git)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/share/rvm/bin"
 source $ZSH/oh-my-zsh.sh
 
+fpath+="~/my-unix-conf/zsh-functions"
+
 if [ -f ~/.myrc ]; then
     source ~/.myrc
 else
