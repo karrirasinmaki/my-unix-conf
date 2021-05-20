@@ -5,13 +5,6 @@ BASEDIR=$PWD
 
 echo $BASEDIR
 
-ln -sfv $BASEDIR/.alacritty.yml ~/.alacritty.yml
-ln -sfv $BASEDIR/.zshrc ~/.zshrc
-ln -sfv $BASEDIR/.myrc ~/.myrc
-ln -sfv $BASEDIR/.vimrc ~/.vimrc
-ln -sfv $BASEDIR/.gitconfig ~/.gitconfig
-ln -sfv $BASEDIR/.gitignore ~/.gitignore
-
 echo "Installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
