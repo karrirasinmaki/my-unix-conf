@@ -13,8 +13,7 @@ set tabstop=2
 set shiftwidth=2
 
 " Set autocomplete
-set iskeyword+=\-
-set iskeyword+=\.
+set iskeyword+=-
 
 ""
 " Wundle

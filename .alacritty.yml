@@ -1,2 +1,7 @@
+env:
+  WINIT_X11_SCALE_FACTOR: '1.2'
 key_bindings:
-  - { key: N,        mods: Control|Shift,           action: SpawnNewInstance            }
+  - { key: N,
+      mods: Control|Shift,
+      action: SpawnNewInstance
+    }

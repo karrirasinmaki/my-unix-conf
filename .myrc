@@ -1,3 +1,6 @@
+# Paths
+export PATH="$PATH:/usr/bin/vendor_perl/"
+
 # Aliases
 alias gitlog='git log -20 --pretty=format:"%C(red)%h%Creset\\ %C(green)%ar%C(cyan)%d\\ %Creset%s%C(red)\\ [%cn]" --graph --decorate --all'
 eval "$(thefuck-alias)"
